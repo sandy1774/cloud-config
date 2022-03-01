@@ -13,14 +13,13 @@ spring:
         
     hibernate:
       ddl-auto: update
-    show-sql: true
-logging:
-  level:
-    com.hazelcast: off   
-      
+    show-sql: true     
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:9001/eureka
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
